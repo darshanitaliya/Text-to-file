@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;700&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anek Telugu', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1493a7;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 450px;
+    padding: 30px 25px 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.wrapper :where(textarea, input, select, button) {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.wrapper textarea{
+    height: 270px;
+    border: 1px solid #ccc;
+    resize: none;
+    padding: 8px 13px;
+}
+
+.wrapper .file-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.file-option .option{
+    width: calc(100%/2 - 8px);
+}
+
+.option :where(input,.select-menu){
+    height: 50px;
+    border: 1px solid #bfbfbf;
+    margin-top: 6px;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+.option .select-menu select{
+    height: 50px;
+    background: none;
+}
+
+.wrapper .save-btn{
+    color: #fff;
+    margin-top: 20px;
+    padding: 15px 0px;
+    opacity: 0.6;
+    cursor: pointer;
+    background: #1493a7;
+    pointer-events: none;
+}
+
+.wrapper textarea:valid ~ .save-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
